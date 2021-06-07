@@ -1,6 +1,6 @@
 **Why?**
 
-Sometimes it's important for openvpn administrators to have a way to limit a list users with valid and not revoked certificates, who can connect to a particular openvpn server. The problem can be solved by creating a white list and applying openvpn  ***client-connect*** callback to check presence of a user's common name in the white list. That is exactly what ***checkcn.py*** script does.
+Sometimes it's important for openvpn administrators to have a way to limit a list users with valid and not revoked certificates, who can connect to a particular openvpn server. The problem can be solved by creating a white list and applying openvpn  ***client-connect*** callback to check presence of a user's common name in the white list. That is exactly what ***connect.py*** script does.
 
 ***client-disconnect*** just logs client disconnection.
 
@@ -19,4 +19,4 @@ Sometimes it's important for openvpn administrators to have a way to limit a lis
 >     chmod a+x /etc/openvpn/server/disconnect.py
 
 3. make shure directory */var/log/openvpn/* exists;
-4. create whitelist: /etc/openvpn/server/cn-whitelist and add your openvpn clients' common names into it.
+4. create whitelist: /etc/openvpn/server/whitelist and add your openvpn clients' common names into it.
